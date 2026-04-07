@@ -3,7 +3,7 @@ In this capstone, I will predict whether the Falcon 9 first stage will land succ
 
 Based on the data collected and prepared for modeling, the main objective is to predict whether the Falcon 9 booster will land successfully. A classification model was used to make this prediction.
 
-Process Steps
+Process Steps:
 
 Data Collection — Data was collected from REST APIs (SpaceX v4 endpoints). The API responded with a JSON file. Flat nested structures were transformed into a DataFrame and saved as a .csv file. Web scraping was performed with Python’s BeautifulSoup to extract HTML tables containing historical data from previous flights. From one HTML table, selected columns were identified as potential features for the classification model. Column and row data from the table were transformed into another DataFrame and saved as a .csv file.
 
