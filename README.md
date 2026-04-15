@@ -1,13 +1,56 @@
 
-In this capstone, I will predict whether the Falcon 9 first stage will land successfully. SpaceX advertises Falcon 9 rocket launches on its website at a cost of 62 million dollars, while other providers charge upwards of 165 million dollars each. Much of the savings comes from SpaceX’s ability to reuse the first stage. Therefore, if we can determine whether the first stage will land, we can estimate the cost of a launch. This information can be valuable if an alternate company wants to bid against SpaceX for a rocket launch.
+In this capstone, the assignment is to predict whether the Falcon 9 first stage will land successfully. SpaceX advertises Falcon 9 rocket launches on its website at a cost of 62 million dollars, while other providers charge upwards of 165 million dollars each. Much of the savings comes from SpaceX’s ability to reuse the first stage. Therefore, if we can determine whether the first stage will land, we can estimate the cost of a launch. This information can be valuable if an alternate company wants to bid against SpaceX for a rocket launch.
 
-Based on the data collected and prepared for modeling, the main objective is to predict whether the Falcon 9 booster will land successfully. A classification model was used to make this prediction.
+This GitHub repository contains all the relevent csv files, python code and Jupyter Notebook labs used in this project. Also contains the final project outcome and summary report.
 
-Process Steps:
+The Data Science Methodology approach was used to systematically guide the process from problem definition and data collection through analysis, modeling and evaluation, ensuring that results were reliable and aligned with the project objectives.
 
-Data Collection — Data was collected from REST APIs (SpaceX v4 endpoints). The API responded with a JSON file. Flat nested structures were transformed into a DataFrame and saved as a .csv file. Web scraping was performed with Python’s BeautifulSoup to extract HTML tables containing historical data from previous flights. From one HTML table, selected columns were identified as potential features for the classification model. Column and row data from the table were transformed into another DataFrame and saved as a .csv file.
+More on the Methodology used:
 
-Data Wrangling — Using Python’s pandas library, data wrangling was performed to enrich IDs via additional endpoints, filter for Falcon 9 launches, handle null values (for example, payload mass), and encode outcomes for downstream modeling.
+1. Business Understanding
+   • Can Falcon 9 first-stage landing success be predicted accurately?
+   • Rocket reusability directly impacts launch cost and competitive advantage
+   • This translates into a data science problem (Binary Classification)
 
-Exploratory Data Analysis (EDA) — SQL queries and database summaries were used to explore the data. Scatter plots and bar charts were created to visualize patterns for features such as launch_site and payload_mass, as well as to identify trends over time. Correlation analysis was applied to gain further insight into the available data. One-hot encoding was also performed on key columns to create categorical fields for machine learning preparation. The work performed on the data was saved in a .csv file.
+2. Analytic Approach
+   • Supervised classification task
+   • Justified the use of classification algorithms due to the binaary target variable (success vs failure)
+
+3. Data Requirements
+   • Identification of required data and features (Historical launch data)
+   • Identification of the target variable representing landing success
+
+4. Data Collection
+   • Identification of data sources (SpaceX API & Wikipedia)
+   • Data retrieved programmatically and stored for processing
+
+5. Data Understanding and Preperation
+   • Data cleaning, transformation and feature engineering (Pandas DataFrame)
+   • Prepared datasets for analysis and modeling
+   • This is where most of the work takes place (Garbage in, Garbage out - GIGO)
+   
+7. Exploratory Data Analysis (EDA)
+   • Insight discovery and visualization
+   • Explored relationships between landing success and other features
+
+8. Modeling
+   • Model selection, training, and comparison
+   • Training multiple classification models
+   • Applied consistent training and testing process through the use of a ML pipeline
+
+9. Model Evaluation
+   • Model performance metrics and interpretation through the use of pipelines
+   • Evaluating models using various metrics
+   • Applying Cross-Validation to support hyperparameter tuning combined with GridSearchCV
+   • Compare results across models
+   
+   
+   
+
+
+
+
+
+
+
 
